@@ -1,71 +1,71 @@
-# Ad Agency ???쒖감 罹좏럹???뚯씠?꾨씪??
+# Ad Agency — 순차 캠페인 파이프라인
 
-Cursor **?먯씠?꾪듃쨌?ㅽ궗**濡?AE ??移댄뵾 ??寃??3?④퀎 罹좏럹?몄쓣 留뚮뱶???꾨줈?앺듃?낅땲??
+Cursor **에이전트·스킬**로 AE → 카피 → 검수 3단계 캠페인을 만드는 프로젝트입니다.
 
-??踰덉뿉 **???留?* ?묒뾽?⑸땲?? ?댁쟾 ?곗텧臾쇱씠 `outputs/`????λ맂 ???ㅼ쓬 ????댁뼱媛묐땲??
+한 번에 **한 팀만** 작업합니다. 이전 산출물이 `outputs/`에 저장된 뒤 다음 팀이 이어갑니다.
 
-## ?ㅼ튂 (clone ??
+## 설치 (clone 후)
 
-1. ??repo瑜?clone?섍퀬 Cursor?먯꽌 ?대뜑瑜??쎈땲??
-2. `brief/brand-brief.template.md` ??`brief/brand-brief.md` 蹂듭궗 ???묒꽦.
-3. 梨꾪똿: `/myagency` ?먮뒗 `??罹좏럹??留뚮뱾?댁쨾`
+1. 이 repo를 clone하고 Cursor에서 폴더를 엽니다.
+2. `brief/brand-brief.template.md` → `brief/brand-brief.md` 복사 후 작성.
+3. 채팅: `/myagency` 또는 `내 캠페인 만들어줘`
 
-## ?쒖옉 諛⑸쾿
+## 시작 방법
 
-1. `brief/brand-brief.template.md`瑜?蹂듭궗??`brief/brand-brief.md`瑜?梨꾩슦嫄곕굹, 梨꾪똿??釉뚮━?꾨? 遺숈뿬 ?ｌ뒿?덈떎.
-2. Cursor?먯꽌 ?덉떆泥섎읆 ?붿껌?⑸땲??
-
-```
-罹좏럹???뚯씠?꾨씪???쒖옉?댁쨾
-```
-
-?먮뒗 ?④퀎蹂?
+1. `brief/brand-brief.template.md`를 복사해 `brief/brand-brief.md`를 채우거나, 채팅에 브리프를 붙여 넣습니다.
+2. Cursor에서 예시처럼 요청합니다.
 
 ```
-AE?? ??釉뚮옖??湲고쉷??留뚮뱾?댁쨾
+캠페인 파이프라인 시작해줘
 ```
 
-(?꾨즺 ??
+또는 단계별:
 
 ```
-移댄뵾?? ??湲고쉷??蹂닿퀬 移댄뵾 ?⑥쨾
+AE야, 이 브랜드 기획서 만들어줘
+```
+
+(완료 후)
+
+```
+카피야, 이 기획서 보고 카피 써줘
 ```
 
 ```
-?대?吏?, ?댁젣 ??李⑤???
+이미지팀, 이제 네 차례야
 ```
 
-???숈씪?섍쾶 ?곸긽 ???μ쇅 ?????寃??
+… 동일하게 영상 → 옥외 → 대표 검수.
 
-## ?먮쫫
+## 흐름
 
 ```mermaid
 flowchart LR
-  B[brief] --> AE[01 AE 湲고쉷??
-  AE --> CP[02 移댄뵾]
-  CP --> IMG[03 ?대?吏]
-  IMG --> VID[04 ?곸긽]
-  CP --> OUT[05 ?μ쇅]
-  VID --> CEO[CEO 寃??
+  B[brief] --> AE[01 AE 기획서]
+  AE --> CP[02 카피]
+  CP --> IMG[03 이미지]
+  IMG --> VID[04 영상]
+  CP --> OUT[05 옥외]
+  VID --> CEO[CEO 검수]
   OUT --> CEO
 ```
 
-## ?ㅽ궗 ?꾩튂
+## 스킬 위치
 
-| ?ㅽ궗 | ??븷 |
+| 스킬 | 역할 |
 |------|------|
-| `my-agency` | 3?④퀎 ?뚯씠?꾨씪???ㅼ??ㅽ듃?덉씠??(`/myagency`) |
-| `my-ae` / `my-copywriter` / `my-reviewer` | `.cursor/agents/` ?먯씠?꾪듃 |
-| `ad-orchestrator` | 6?④퀎 ?뺤옣 ?뚯씠?꾨씪??(?대?吏쨌?곸긽쨌?μ쇅쨌CEO) |
-| `ad-ae` | 諛⑺뼢??湲고쉷??|
-| `ad-copywriter` | ?듭떖 移댄뵾 |
-| `ad-image` | ?대?吏 ?쒖븞 |
-| `ad-video` | ?곸긽 ?쒖븞 |
-| `ad-outdoor` | ?μ쇅 ?쒖븞 |
-| `ad-ceo-review` | 50???댁긽 ?듦낵 |
+| `my-agency` | 3단계 파이프라인 오케스트레이터 (`/myagency`) |
+| `my-ae` / `my-copywriter` / `my-reviewer` | `.cursor/agents/` 에이전트 |
+| `ad-orchestrator` | 6단계 확장 파이프라인 (이미지·영상·옥외·CEO) |
+| `ad-ae` | 방향성 기획서 |
+| `ad-copywriter` | 핵심 카피 |
+| `ad-image` | 이미지 시안 |
+| `ad-video` | 영상 시안 |
+| `ad-outdoor` | 옥외 시안 |
+| `ad-ceo-review` | 50점 이상 통과 |
 
-## CEO ?듦낵 湲곗?
+## CEO 통과 기준
 
-- 7??ぉ 횞 10??= 70??留뚯젏
-- **50???댁긽** ?듦낵 (蹂꾨룄 `06_ceo_寃??md` ?놁쓬)
-- **50??誘몃쭔** ??`outputs/06_ceo_寃??md`???蹂??섏젙 吏??
+- 7항목 × 10점 = 70점 만점
+- **50점 이상** 통과 (별도 `06_ceo_검수.md` 없음)
+- **50점 미만** → `outputs/06_ceo_검수.md`에 팀별 수정 지시

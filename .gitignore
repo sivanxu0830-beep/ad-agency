@@ -1,0 +1,11 @@
+# 캠페인 산출물 (실습 결과)
+outputs/*
+!outputs/.gitkeep
+
+# 실제 브리프 (개인·클라이언트 정보)
+brief/brand-brief.md
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
